@@ -1,38 +1,37 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "keyiclient",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "KeYi Client",
+  "description": "KeYi Client made by KeYiMC!",
   "authors": [
-    "Me!"
+    "DeeChael",
+    "KeYiMC"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://www.github.com/KeYiMC",
+    "sources": "https://github.com/KeYiMC/KeYi-Client"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
-
+  "license": "MIT",
+  "icon": "assets/keyiclient/icon.png",
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "net.fabricmc.example.ExampleMod"
+    "client": [
+      "cc.keyimc.client.KeYiClient"
+    ],
+    "modmenu": [
+      "cc.keyimc.client.KeYiModMenuIntegration"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "keyiclient.mixins.json"
   ],
-
   "depends": {
     "fabricloader": ">=0.14.9",
     "fabric-api": "*",
     "minecraft": "~1.19",
     "java": ">=17"
-  },
-  "suggests": {
-    "another-mod": "*"
   }
 }
